@@ -28,7 +28,7 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
         //Jump when space pressed or mouse clicked user should jump
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown((0)) && onGround)
+        if (Input.GetKeyDown(KeyCode.Space) && onGround || Input.GetMouseButtonDown((0)) && onGround)
         {
             rb.velocity = Vector2.up * jumpForce;
         }
