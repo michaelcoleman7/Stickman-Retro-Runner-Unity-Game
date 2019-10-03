@@ -105,3 +105,9 @@ StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.
 StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.TestRunner/GUI/Views/EditModeTestListGUI.cs
 StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.TestRunner/GUI/Views/PlayModeTestListGUI.cs
 StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.TestRunner/GUI/Views/TestListGUIBase.cs
+StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.TestRunner/Api/ITestAdaptorFactory.cs
+StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.TestRunner/NUnitExtension/TestRunnerStateSerializer.cs
+StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.TestRunner/RequireApiProfileAttribute.cs
+StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.TestRunner/RequirePlatformSupportAttribute.cs
+StickmanRunner/Library/PackageCache/com.unity.test-framework@1.0.13/UnityEditor.TestRunner/TestBuildAssemblyFilter.cs
+StickmanRunner/Library/*
