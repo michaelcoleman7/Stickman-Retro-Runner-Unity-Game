@@ -12,7 +12,7 @@ public class SpawnPlatforms : MonoBehaviour
     void Start()
     {
         //get the platform width from the platforms using the box collider
-        platformWidth = platform.GetComponent<BoxCollider2D>().size.x;    
+        platformWidth = platform.GetComponent<BoxCollider2D>().size.x;
     }
 
     void Update()
