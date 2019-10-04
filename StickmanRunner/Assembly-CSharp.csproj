@@ -65,8 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\__Scripts\CameraFollowPlayer.cs" />
     <Compile Include="Assets\__Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\__Scripts\PlatformDestoyer.cs" />
     <Compile Include="Assets\__Scripts\SpawnPlatforms.cs" />
-    <Compile Include="Assets\__Scripts\TestScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Michael/Desktop/software development/4th Year Projects/Mobile Apps Development/Stickman Retro Runner/Stickman-Retro-Runner-Unity-Game/StickmanRunner/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
