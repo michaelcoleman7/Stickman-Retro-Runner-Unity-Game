@@ -600,6 +600,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2843933391555479237, guid: de3411e3790e1e24eaa714c6c4d68a36,
         type: 3}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: minDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: maxDistance
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2, type: 3}
 --- !u!4 &708998390 stripped
@@ -822,6 +832,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2843933391555479237, guid: de3411e3790e1e24eaa714c6c4d68a36,
         type: 3}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: minDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: maxDistance
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2, type: 3}
 --- !u!1 &1123010073
@@ -1250,6 +1270,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2843933391555479237, guid: de3411e3790e1e24eaa714c6c4d68a36,
         type: 3}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: minDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: maxDistance
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2, type: 3}
 --- !u!1001 &6892668473930941533
