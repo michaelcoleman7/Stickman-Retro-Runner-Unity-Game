@@ -390,12 +390,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  speedMultiplyer: 1.05
+  speedMultiplyer: 1.01
   scoreSpeedIncrease: 500
   jumpForce: 10
   jumpPeriod: 0.25
   PlatformCheck: {fileID: 1662853177}
-  checkRadius: 0.5
+  checkRadius: 0.1
   platform:
     serializedVersion: 2
     m_Bits: 256
