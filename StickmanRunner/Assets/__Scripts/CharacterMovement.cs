@@ -7,6 +7,9 @@ public class CharacterMovement : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed = 15f;
+    public float speedMultiplyer;
+    public float scoreSpeedIncrease;
+    private float scoreSpeedIncreaseCount;
     public float jumpForce;
     public float jumpPeriod;
     private float jumpPeriodTimer;
@@ -80,6 +83,18 @@ public class CharacterMovement : MonoBehaviour
     {
         // Have detection for when the user is on the ground using a game object placed at players feet.
         onGround = Physics2D.OverlapCircle(PlatformCheck.position, checkRadius, platform);
+
+        if (transform.position.x > scoreSpeedIncrease) 
+        {
+            scoreSpeedIncreaseCount = scoreSpeedIncrease;
+
+            //increase the distance the incraese occurs at as the player will be moving faster
+            scoreSpeedIncrease = scoreSpeedIncrease * speedMultiplyer;
+
+            //increase move speed by the multiplyer
+            moveSpeed = moveSpeed * speedMultiplyer;
+
+        }
 
         //Call player movement function
         Move();
