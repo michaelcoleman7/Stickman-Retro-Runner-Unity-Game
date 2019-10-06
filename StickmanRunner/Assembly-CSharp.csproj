@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\__Scripts\CameraFollowPlayer.cs" />
     <Compile Include="Assets\__Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\__Scripts\DeathPlatformDestroyer.cs" />
+    <Compile Include="Assets\__Scripts\GameController.cs" />
     <Compile Include="Assets\__Scripts\PlatformDestoyer.cs" />
     <Compile Include="Assets\__Scripts\SpawnPlatforms.cs" />
     <Reference Include="Unity.Timeline.Editor">

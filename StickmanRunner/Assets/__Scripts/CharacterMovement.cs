@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 15f;
+    public float moveSpeed;
+    private float moveSpeedStartValue;
     public float speedMultiplyer;
     public float scoreSpeedIncrease;
+    private float scoreSpeedIncreaseStartValue;
     private float scoreSpeedIncreaseCount;
+    private float scoreSpeedIncreaseCountStartValue;
     public float jumpForce;
     public float jumpPeriod;
     private float jumpPeriodTimer;
@@ -20,6 +22,8 @@ public class CharacterMovement : MonoBehaviour
     public float checkRadius;
     public LayerMask platform;
 
+    public GameController gameController;
+
 
     void Start()
     {
@@ -27,6 +31,10 @@ public class CharacterMovement : MonoBehaviour
 
         //set the Jump period timer to the jump period specified
         jumpPeriodTimer = jumpPeriod;
+
+        moveSpeedStartValue = moveSpeed;
+        scoreSpeedIncreaseCountStartValue = scoreSpeedIncreaseCount;
+        scoreSpeedIncreaseStartValue = scoreSpeedIncrease; 
     }
 
     void Update()
@@ -105,5 +113,18 @@ public class CharacterMovement : MonoBehaviour
     {
         //Move player constantly by the move speed on the y axis
         rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+    }
+
+
+    //Adopted from https://gamedev.stackexchange.com/questions/82119/simple-collision-detection-in-unity-2d
+    void OnCollisionEnter2D(Collision2D c)
+    {
+        if (c.gameObject.tag == "DeathArea") 
+        {
+            gameController.RestartGame();
+            moveSpeed = moveSpeedStartValue;
+            scoreSpeedIncreaseCount = scoreSpeedIncreaseCountStartValue;
+            scoreSpeedIncrease = scoreSpeedIncreaseStartValue;
+        }
     }
 }
