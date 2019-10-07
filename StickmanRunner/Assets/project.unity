@@ -481,6 +481,7 @@ MonoBehaviour:
   scoreValue: 0
   highScoreValue: 0
   pointIncrease: 10
+  increaseScore: 1
 --- !u!4 &214850113
 Transform:
   m_ObjectHideFlags: 0
