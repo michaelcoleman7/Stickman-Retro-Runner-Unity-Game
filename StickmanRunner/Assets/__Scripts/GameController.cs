@@ -12,11 +12,15 @@ public class GameController : MonoBehaviour
 
     private PlatformDestoyer[] platformList;
 
+    private ScoreManager scoreManager;
+
     // Start is called before the first frame update
     void Start()
     {
         platformStartPosition = platformGenerator.position;
         playerStartPosition = player.transform.position;
+
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -34,6 +38,9 @@ public class GameController : MonoBehaviour
     //adopted from https://docs.unity3d.com/Manual/Coroutines.html
     public IEnumerator RestartGameCoRoutine() 
     {
+        // Stop score increasing
+        scoreManager.increaseScore = false;
+
         //set player to invisible to create illusion of death
         player.gameObject.SetActive(false);
 
@@ -50,8 +57,12 @@ public class GameController : MonoBehaviour
         player.transform.position = playerStartPosition;
         platformGenerator.position = platformStartPosition;
 
+
         //Set the player visible again to viewer
         player.gameObject.SetActive(true);
+
+        scoreManager.scoreValue = 0;
+        scoreManager.increaseScore = true;
 
     }
 }

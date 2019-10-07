@@ -68,6 +68,7 @@
     <Compile Include="Assets\__Scripts\DeathPlatformDestroyer.cs" />
     <Compile Include="Assets\__Scripts\GameController.cs" />
     <Compile Include="Assets\__Scripts\PlatformDestoyer.cs" />
+    <Compile Include="Assets\__Scripts\ScoreManager.cs" />
     <Compile Include="Assets\__Scripts\SpawnPlatforms.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Michael/Desktop/software development/4th Year Projects/Mobile Apps Development/Stickman Retro Runner/Stickman-Retro-Runner-Unity-Game/StickmanRunner/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
