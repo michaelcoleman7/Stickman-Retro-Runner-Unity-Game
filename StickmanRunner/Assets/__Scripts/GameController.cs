@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
     //adopted from https://docs.unity3d.com/Manual/Coroutines.html
     public IEnumerator RestartGameCoRoutine() 
     {
-        // Stop score increasing
+        // Stop score increasing after death
         scoreManager.increaseScore = false;
 
         //set player to invisible to create illusion of death
@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour
         //Set the player visible again to viewer
         player.gameObject.SetActive(true);
 
+        //reset score values
         scoreManager.scoreValue = 0;
         scoreManager.increaseScore = true;
 

@@ -20,6 +20,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("HighScore")) 
         {
+            //get high score value from player preferences - adopted from https://unity3d.com/de/learn/tutorials/topics/scripting/high-score-playerprefs
             highScoreValue = PlayerPrefs.GetFloat("HighScore");
         }
     }
@@ -33,13 +34,18 @@ public class ScoreManager : MonoBehaviour
             scoreValue += pointIncrease * Time.deltaTime;
         }
         
+        //if users score is higher than the current high score
         if (scoreValue > highScoreValue) 
         {
             //set new high score to high score value
             highScoreValue = scoreValue;
 
+            //Keep high score value in player preferences even if game is exited - adopted from https://unity3d.com/de/learn/tutorials/topics/scripting/high-score-playerprefs
             PlayerPrefs.SetFloat("HighScore", highScoreValue);
         }
+
+        //set Text values in unity to score increase
         score.text = "Score: " + Mathf.Round(scoreValue);
+        highScore.text = "Score: " + Mathf.Round(highScoreValue);
     }
 }
