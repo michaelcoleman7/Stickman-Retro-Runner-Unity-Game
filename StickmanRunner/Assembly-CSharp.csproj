@@ -67,6 +67,7 @@
     <Compile Include="Assets\__Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\__Scripts\DeathPlatformDestroyer.cs" />
     <Compile Include="Assets\__Scripts\GameController.cs" />
+    <Compile Include="Assets\__Scripts\MainMenuController.cs" />
     <Compile Include="Assets\__Scripts\PlatformDestoyer.cs" />
     <Compile Include="Assets\__Scripts\ScoreManager.cs" />
     <Compile Include="Assets\__Scripts\SpawnPlatforms.cs" />
