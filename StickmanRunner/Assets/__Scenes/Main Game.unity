@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194525949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.6, y: -8.2, z: -1}
+  m_LocalPosition: {x: -15.6, y: -1.4, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1662853177}
@@ -610,7 +610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979261146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.863709, y: -15.61, z: 21.418732}
+  m_LocalPosition: {x: -2.863709, y: -3.3, z: 21.418732}
   m_LocalScale: {x: 25.51058, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 93735082}
@@ -1156,6 +1156,8 @@ MonoBehaviour:
   maxDistance: 20
   maxSpawnHeight: {fileID: 1846987639}
   maxHeightDifference: 0
+  trapPlatform1: {fileID: 0}
+  trapPlatform2: {fileID: 0}
 --- !u!1 &1704218336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1516,7 @@ PrefabInstance:
     - target: {fileID: 3740119336253413239, guid: fd95f0ade5063274b9ed5dd5e8406d1a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.61
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 3740119336253413239, guid: fd95f0ade5063274b9ed5dd5e8406d1a,
         type: 3}
@@ -1666,6 +1668,30 @@ PrefabInstance:
       propertyPath: maxHeightDifference
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: trap
+      value: 
+      objectReference: {fileID: 1041067569741734302, guid: f3c0450c0697b714398769c657c66af4,
+        type: 3}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: trapPlatform
+      value: 
+      objectReference: {fileID: 7758377092171068830, guid: 8da29bc5816c7ec43b6a5fca063d710b,
+        type: 3}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: trapPlatform1
+      value: 
+      objectReference: {fileID: 7267747776434829732, guid: 8032c214462da154ca8510b30055c869,
+        type: 3}
+    - target: {fileID: 6421589542848832748, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2,
+        type: 3}
+      propertyPath: trapPlatform2
+      value: 
+      objectReference: {fileID: 2657807964790830496, guid: 2ee5dee4cd2e11f49a755ae789115b5f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9449c7c8501e84c4bb2518e5aa2ec4c2, type: 3}
 --- !u!1001 &6892668473930941533
