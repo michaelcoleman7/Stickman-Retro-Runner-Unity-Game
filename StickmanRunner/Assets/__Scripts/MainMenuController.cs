@@ -11,6 +11,11 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("Main Game");
     }
 
+    public void OptionsMenu()
+    {
+        SceneManager.LoadScene("Options Menu");
+    }
+
     public void QuitGame()
     {
         //Quit game - adopted from https://docs.unity3d.com/ScriptReference/Application.Quit.html
