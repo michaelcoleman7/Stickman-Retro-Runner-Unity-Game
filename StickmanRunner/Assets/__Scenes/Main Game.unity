@@ -969,8 +969,10 @@ MonoBehaviour:
   maxDistance: 20
   maxSpawnHeight: {fileID: 1846987639}
   maxHeightDifference: 0
-  trapPlatform1: {fileID: 0}
-  trapPlatform2: {fileID: 0}
+  trapPlatform1: {fileID: 826640769125308924, guid: 010aa1ad8a1211d449072309c012d9b1,
+    type: 3}
+  trapPlatform2: {fileID: 826640769125308924, guid: 010aa1ad8a1211d449072309c012d9b1,
+    type: 3}
 --- !u!1 &1704218336
 GameObject:
   m_ObjectHideFlags: 0

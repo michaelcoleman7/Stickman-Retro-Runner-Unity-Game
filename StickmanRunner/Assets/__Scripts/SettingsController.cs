@@ -6,22 +6,28 @@ using UnityEngine.UI;
 
 public class SettingsController : MonoBehaviour
 {
-    GameObject music = GameObject.FindGameObjectWithTag("Music");
-    public AudioSource musicAudioSource;
     public Image unmutedSFXImg;
     public Image unmutedMusicImg;
 
     public void MuteMusic()
     {
-        if (musicAudioSource.mute == false)
+        //If the player pref value for mute is set to false
+        if (PlayerPrefs.GetString("Muted") == "false")
         {
-            musicAudioSource.mute = true;
+            //set mute playerpref value to true
+            PlayerPrefs.SetString("Muted", "true");
             unmutedMusicImg.enabled = false;
+            //Set the music change value to true to initiate the change in Music Controller
+            PlayerPrefs.SetString("MusicChange", "true");
         }
-        else 
+        //If the player pref value for mute is set to true
+        else if (PlayerPrefs.GetString("Muted") == "true")
         {
-            musicAudioSource.mute = false;
+            //set mute playerpref value to false
+            PlayerPrefs.SetString("Muted", "false");
             unmutedMusicImg.enabled = true;
+            //Set the music change value to true to initiate the change in Music Controller
+            PlayerPrefs.SetString("MusicChange", "true");
         }
             
     }
