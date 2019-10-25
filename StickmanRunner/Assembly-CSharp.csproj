@@ -66,6 +66,7 @@
     <Compile Include="Assets\__Scripts\CameraFollowPlayer.cs" />
     <Compile Include="Assets\__Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\__Scripts\DeathPlatformDestroyer.cs" />
+    <Compile Include="Assets\__Scripts\DeathScreenManager.cs" />
     <Compile Include="Assets\__Scripts\DontDestroyMusic.cs" />
     <Compile Include="Assets\__Scripts\GameController.cs" />
     <Compile Include="Assets\__Scripts\MainMenuController.cs" />

@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
 
     private ScoreManager scoreManager;
 
+    public DeathScreenManager deathScreen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,21 +24,7 @@ public class GameController : MonoBehaviour
 
         scoreManager = FindObjectOfType<ScoreManager>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void RestartGame() 
-    {
-        //adopted from https://docs.unity3d.com/Manual/Coroutines.html
-        StartCoroutine("RestartGameCoRoutine");
-    }
-
-    //adopted from https://docs.unity3d.com/Manual/Coroutines.html
-    public IEnumerator RestartGameCoRoutine() 
     {
         // Stop score increasing after death
         scoreManager.increaseScore = false;
@@ -44,11 +32,17 @@ public class GameController : MonoBehaviour
         //set player to invisible to create illusion of death
         player.gameObject.SetActive(false);
 
-        //add wait period so user is not disorientated - adopted from https://answers.unity.com/questions/885849/how-to-respawn-with-a-simple-delay.html
-        yield return new WaitForSeconds(0.5f);
+        //make death screen visible to player
+        deathScreen.gameObject.SetActive(true);
+    }
+
+    public void ResetPlayer()
+    {
+        //Turn off death screen
+        deathScreen.gameObject.SetActive(false); 
 
         platformList = FindObjectsOfType<PlatformDestoyer>();
-        for (int i = 0; i < platformList.Length; i++) 
+        for (int i = 0; i < platformList.Length; i++)
         {
             platformList[i].gameObject.SetActive(false);
         }
@@ -64,6 +58,5 @@ public class GameController : MonoBehaviour
         //reset score values
         scoreManager.scoreValue = 0;
         scoreManager.increaseScore = true;
-
     }
 }
