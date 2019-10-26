@@ -71,6 +71,7 @@
     <Compile Include="Assets\__Scripts\GameController.cs" />
     <Compile Include="Assets\__Scripts\MainMenuController.cs" />
     <Compile Include="Assets\__Scripts\MusicController.cs" />
+    <Compile Include="Assets\__Scripts\PauseMenuController.cs" />
     <Compile Include="Assets\__Scripts\PlatformDestoyer.cs" />
     <Compile Include="Assets\__Scripts\ScoreManager.cs" />
     <Compile Include="Assets\__Scripts\SettingsController.cs" />

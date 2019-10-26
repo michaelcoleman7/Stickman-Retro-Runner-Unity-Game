@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour
 
     public DeathScreenManager deathScreen;
 
+    public PauseMenuController pauseMenuController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,17 @@ public class GameController : MonoBehaviour
 
         scoreManager = FindObjectOfType<ScoreManager>();
     }
-    public void RestartGame() 
+
+    void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //call PauseMenuController method to pause game
+            pauseMenuController.PauseGame();
+        }
+    }
+        public void RestartGame() 
     {
         // Stop score increasing after death
         scoreManager.increaseScore = false;
@@ -36,7 +48,7 @@ public class GameController : MonoBehaviour
         deathScreen.gameObject.SetActive(true);
     }
 
-    public void ResetPlayer()
+    public void ResetGame()
     {
         //Turn off death screen
         deathScreen.gameObject.SetActive(false); 

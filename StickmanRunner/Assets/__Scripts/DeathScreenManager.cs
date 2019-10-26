@@ -8,7 +8,7 @@ public class DeathScreenManager : MonoBehaviour
     
     public void RestartGame()
     {
-        FindObjectOfType<GameController>().ResetPlayer();
+        FindObjectOfType<GameController>().ResetGame();
     }
 
     // Quit Game
