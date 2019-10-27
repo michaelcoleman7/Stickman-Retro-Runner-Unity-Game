@@ -58,12 +58,13 @@ public class CharacterController : MonoBehaviour
 
                 //as player jumps timer will go down
                 jumpPeriodTimer -= Time.deltaTime;
-            }
-            //If the player pref value for MutedSFX is set to false
-            if (PlayerPrefs.GetString("MutedSFX") == "false")
-            {
-                //Play Jump sound clip
-                jumpSound.Play();
+
+                //If the player pref value for MutedSFX is set to false
+                if (PlayerPrefs.GetString("MutedSFX") == "false")
+                {
+                    //Play Jump sound clip with delay to avoid multiple sound effects playing during powered up jump
+                    jumpSound.PlayDelayed(0.03f);
+                }
             }
         }
 
