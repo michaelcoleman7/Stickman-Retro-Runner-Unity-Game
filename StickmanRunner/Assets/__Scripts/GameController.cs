@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
     public Transform platformGenerator;
     private Vector3 platformStartPosition;
 
-    public CharacterMovement player;
+    public CharacterController player;
     private Vector3 playerStartPosition;
 
     private PlatformDestoyer[] platformList;

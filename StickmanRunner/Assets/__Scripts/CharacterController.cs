@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
     public float moveSpeed;
     private float moveSpeedStartValue;
@@ -59,8 +59,12 @@ public class CharacterMovement : MonoBehaviour
                 //as player jumps timer will go down
                 jumpPeriodTimer -= Time.deltaTime;
             }
-            //Play Jump sound clip
-            jumpSound.Play();
+            //If the player pref value for MutedSFX is set to false
+            if (PlayerPrefs.GetString("MutedSFX") == "false")
+            {
+                //Play Jump sound clip
+                jumpSound.Play();
+            }
         }
 
         //if user lifts space key or the mouse click
@@ -130,7 +134,11 @@ public class CharacterMovement : MonoBehaviour
             moveSpeed = moveSpeedStartValue;
             scoreSpeedIncreaseCount = scoreSpeedIncreaseCountStartValue;
             scoreSpeedIncrease = scoreSpeedIncreaseStartValue;
-            deathSound.Play();
+            if (PlayerPrefs.GetString("MutedSFX") == "false")
+            {
+                //Play Jump sound clip
+                deathSound.Play();
+            }
         }
     }
 }

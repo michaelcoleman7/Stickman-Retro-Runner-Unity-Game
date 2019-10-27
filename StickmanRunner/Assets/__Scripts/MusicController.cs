@@ -13,7 +13,12 @@ public class MusicController : MonoBehaviour
             //Set up audio using previously saved user configurations
             PlayerPrefs.SetString("Muted", PlayerPrefs.GetString("Muted"));
             PlayerPrefs.SetString("MusicChange", "true");
-        }  
+        }
+        else
+        {
+            //set initial value of muted if does not currently exist
+            PlayerPrefs.SetString("Muted", "false");
+        }
     }
 
     void Update()
