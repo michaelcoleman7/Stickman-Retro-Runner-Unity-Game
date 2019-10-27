@@ -22,6 +22,9 @@ public class CharacterMovement : MonoBehaviour
     public float checkRadius;
     public LayerMask platform;
 
+    public AudioSource jumpSound;
+    public AudioSource deathSound;
+
     public GameController gameController;
 
 
@@ -56,6 +59,8 @@ public class CharacterMovement : MonoBehaviour
                 //as player jumps timer will go down
                 jumpPeriodTimer -= Time.deltaTime;
             }
+            //Play Jump sound clip
+            jumpSound.Play();
         }
 
         //if user lifts space key or the mouse click
@@ -125,6 +130,7 @@ public class CharacterMovement : MonoBehaviour
             moveSpeed = moveSpeedStartValue;
             scoreSpeedIncreaseCount = scoreSpeedIncreaseCountStartValue;
             scoreSpeedIncrease = scoreSpeedIncreaseStartValue;
+            deathSound.Play();
         }
     }
 }

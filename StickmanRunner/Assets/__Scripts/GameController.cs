@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        
+        //If escape button is pressed then pause the game
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //call PauseMenuController method to pause game
