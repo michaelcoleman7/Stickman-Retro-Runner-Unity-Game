@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
+    public Image helpInfo;
+    public Text helpText;
     public void Start()
     {
         if (PlayerPrefs.HasKey("MutedSFX"))
@@ -26,6 +29,21 @@ public class MainMenuController : MonoBehaviour
     public void OptionsMenu()
     {
         SceneManager.LoadScene("Options Menu");
+    }
+
+    public void HelpMenu()
+    {
+        if (helpInfo.enabled)
+        {
+            helpInfo.enabled = false;
+            helpText.enabled = false;
+        }
+        else 
+        {
+            helpInfo.enabled = true;
+            helpText.enabled = true;
+        }
+
     }
 
     public void QuitGame()
