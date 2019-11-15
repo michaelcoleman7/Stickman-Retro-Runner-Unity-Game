@@ -470,6 +470,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 1450888535063076403, guid: c1919be57195e6d4180e19672c5ec8d9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441819609503748376, guid: c1919be57195e6d4180e19672c5ec8d9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1450888533541099709, guid: c1919be57195e6d4180e19672c5ec8d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -539,6 +549,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450888534853292671, guid: c1919be57195e6d4180e19672c5ec8d9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450888534853292671, guid: c1919be57195e6d4180e19672c5ec8d9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.177117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450888534853292671, guid: c1919be57195e6d4180e19672c5ec8d9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450888534853292671, guid: c1919be57195e6d4180e19672c5ec8d9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10.099507
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1919be57195e6d4180e19672c5ec8d9, type: 3}
@@ -614,6 +644,21 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 150143766}
+    - target: {fileID: 4868946163407687331, guid: 66f413bf1b7405d44b3c457bdca9597b,
+        type: 3}
+      propertyPath: maxDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868946163407687331, guid: 66f413bf1b7405d44b3c457bdca9597b,
+        type: 3}
+      propertyPath: minDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868946163407687331, guid: 66f413bf1b7405d44b3c457bdca9597b,
+        type: 3}
+      propertyPath: maxHeightDifference
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4868946163083857123, guid: 66f413bf1b7405d44b3c457bdca9597b,
         type: 3}
       propertyPath: spawnPoint
@@ -627,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 4868946163083857123, guid: 66f413bf1b7405d44b3c457bdca9597b,
         type: 3}
       propertyPath: maxDistance
-      value: 1.1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4868946163083857123, guid: 66f413bf1b7405d44b3c457bdca9597b,
         type: 3}
