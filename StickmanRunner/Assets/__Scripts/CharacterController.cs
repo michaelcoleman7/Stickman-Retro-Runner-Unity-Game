@@ -15,6 +15,7 @@ public class CharacterController : MonoBehaviour
     public float jumpForce;
     public float jumpPeriod;
     private float jumpPeriodTimer;
+    private bool jumping;
     private Rigidbody2D rb;
 
     private bool onGround;
@@ -37,7 +38,8 @@ public class CharacterController : MonoBehaviour
 
         moveSpeedStartValue = moveSpeed;
         scoreSpeedIncreaseCountStartValue = scoreSpeedIncreaseCount;
-        scoreSpeedIncreaseStartValue = scoreSpeedIncrease; 
+        scoreSpeedIncreaseStartValue = scoreSpeedIncrease;
+        jumping = false;
     }
 
     void Update()
@@ -47,9 +49,12 @@ public class CharacterController : MonoBehaviour
         {
             //jump player by the jump force specified
             rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
+
+            // player has initiated a jump
+            jumping = true;
         }
 
-        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton((0)))
+        if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton((0))) && jumping)
         {
             if (jumpPeriodTimer > 0)
             {
@@ -73,6 +78,8 @@ public class CharacterController : MonoBehaviour
         {
             //set timer to 0
             jumpPeriodTimer = 0;
+
+            jumping = false;
         }
 
         //if user hit ground, reset jump period timer
