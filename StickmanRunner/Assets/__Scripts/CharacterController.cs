@@ -60,6 +60,7 @@ public class CharacterController : MonoBehaviour
             if (!onGround && doubleJump) 
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpPeriodTimer = jumpPeriod;
                 // player has initiated a jump
                 jumping = true;
                 doubleJump = false;
