@@ -16,6 +16,7 @@ public class CharacterController : MonoBehaviour
     public float jumpPeriod;
     private float jumpPeriodTimer;
     private bool jumping;
+    private bool doubleJump;
     private Rigidbody2D rb;
 
     private bool onGround;
@@ -45,13 +46,24 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         //Jump when space pressed or mouse clicked user should jump
-        if (Input.GetKeyDown(KeyCode.Space) && onGround || Input.GetMouseButtonDown((0)) && onGround)
+        if (Input.GetKeyDown(KeyCode.Space) && onGround || Input.GetMouseButtonDown((0)))
         {
-            //jump player by the jump force specified
-            rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
+            if (onGround)
+            {
+                //jump player by the jump force specified
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
-            // player has initiated a jump
-            jumping = true;
+                // player has initiated a jump
+                jumping = true;
+            }
+
+            if (!onGround && doubleJump) 
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                // player has initiated a jump
+                jumping = true;
+                doubleJump = false;
+            }
         }
 
         if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton((0))) && jumping)
@@ -86,6 +98,7 @@ public class CharacterController : MonoBehaviour
         if (onGround) 
         {
             jumpPeriodTimer = jumpPeriod;
+            doubleJump = true;
         }
 
 
