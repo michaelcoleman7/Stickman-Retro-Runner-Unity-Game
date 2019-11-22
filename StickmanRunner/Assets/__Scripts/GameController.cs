@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public Transform platformGenerator;
+    public Transform deathPlatformGenerator;
     private Vector3 platformStartPosition;
+    private Vector3 deathPlatformStartPosition;
 
     public CharacterController player;
     private Vector3 playerStartPosition;
@@ -22,6 +24,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         platformStartPosition = platformGenerator.position;
+        deathPlatformStartPosition = deathPlatformGenerator.position;
         playerStartPosition = player.transform.position;
 
         scoreManager = FindObjectOfType<ScoreManager>();
@@ -61,7 +64,8 @@ public class GameController : MonoBehaviour
 
         //mobve player and platform generators to their origional positions
         player.transform.position = playerStartPosition;
-        platformGenerator.position = platformStartPosition;
+        platformGenerator.position = platformStartPosition; 
+        deathPlatformGenerator.position = deathPlatformStartPosition;
 
 
         //Set the player visible again to viewer

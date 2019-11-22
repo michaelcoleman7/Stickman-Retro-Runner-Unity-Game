@@ -332,6 +332,11 @@ PrefabInstance:
       propertyPath: pauseMenuController
       value: 
       objectReference: {fileID: 1420997198}
+    - target: {fileID: 410337660490086096, guid: 40564ec3c02a4704daea76574f3885b0,
+        type: 3}
+      propertyPath: deathPlatformGenerator
+      value: 
+      objectReference: {fileID: 4868946164760411006}
     - target: {fileID: 410337660490086097, guid: 40564ec3c02a4704daea76574f3885b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -686,6 +691,12 @@ PrefabInstance:
       objectReference: {fileID: 1123010073}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f413bf1b7405d44b3c457bdca9597b, type: 3}
+--- !u!4 &4868946164760411006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914004654025410527, guid: 66f413bf1b7405d44b3c457bdca9597b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4868946164760411005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5064958599814503252
 PrefabInstance:
   m_ObjectHideFlags: 0
