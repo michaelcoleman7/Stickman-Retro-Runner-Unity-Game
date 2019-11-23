@@ -8,6 +8,7 @@ public class MainMenuController : MonoBehaviour
 {
     public Image helpInfo;
     public Text helpText;
+    public Text helpText2;
     public void Start()
     {
         if (PlayerPrefs.HasKey("MutedSFX"))
@@ -37,11 +38,13 @@ public class MainMenuController : MonoBehaviour
         {
             helpInfo.enabled = false;
             helpText.enabled = false;
+            helpText2.enabled = false;
         }
         else 
         {
             helpInfo.enabled = true;
             helpText.enabled = true;
+            helpText2.enabled = true;
         }
 
     }

@@ -46,6 +46,6 @@ public class ScoreManager : MonoBehaviour
 
         //set Text values in unity to score increase
         score.text = "Score: " + Mathf.Round(scoreValue);
-        highScore.text = "Score: " + Mathf.Round(highScoreValue);
+        highScore.text = "High Score: " + Mathf.Round(highScoreValue);
     }
 }
