@@ -81,7 +81,7 @@ public class CharacterController : MonoBehaviour
                 if (PlayerPrefs.GetString("MutedSFX") == "false")
                 {
                     //Play Jump sound clip with delay to avoid multiple sound effects playing during powered up jump
-                    jumpSound.PlayDelayed(0.03f);
+                    jumpSound.PlayDelayed(0.05f);
                 }
             }
         }
@@ -101,21 +101,6 @@ public class CharacterController : MonoBehaviour
             jumpPeriodTimer = jumpPeriod;
             doubleJump = true;
         }
-
-
-        //Can add double jump code - need to discuss with client
-        /*//Jump when space pressed and user still has a double jump left
-        if (Input.GetKeyDown(KeyCode.Space) && doubleJump > 0) 
-        {
-            rb.velocity = Vector2.up * jumpForce;
-            doubleJump--;
-        }
-        //Jump when space pressed and user but has no double jump left
-        else if (Input.GetKeyDown(KeyCode.Space) && doubleJump == 0 && onGround)
-        {
-            rb.velocity = Vector2.up * jumpForce;
-        }*/
-
     }
 
     void FixedUpdate()
