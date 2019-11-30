@@ -790,6 +790,12 @@ PrefabInstance:
       propertyPath: maxHeightDifference
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4868946163407687331, guid: 66f413bf1b7405d44b3c457bdca9597b,
+        type: 3}
+      propertyPath: spikePlatform
+      value: 
+      objectReference: {fileID: 978900130998103328, guid: aaf2f47ddb519cc4c876adc23da1f8e2,
+        type: 3}
     - target: {fileID: 4868946163083857123, guid: 66f413bf1b7405d44b3c457bdca9597b,
         type: 3}
       propertyPath: spawnPoint
@@ -810,6 +816,12 @@ PrefabInstance:
       propertyPath: minDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4868946163083857123, guid: 66f413bf1b7405d44b3c457bdca9597b,
+        type: 3}
+      propertyPath: spikePlatform
+      value: 
+      objectReference: {fileID: 826640769125308924, guid: 010aa1ad8a1211d449072309c012d9b1,
+        type: 3}
     - target: {fileID: 4868946163889606818, guid: 66f413bf1b7405d44b3c457bdca9597b,
         type: 3}
       propertyPath: destructionPoint

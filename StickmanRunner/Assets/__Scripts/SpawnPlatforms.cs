@@ -18,7 +18,8 @@ public class SpawnPlatforms : MonoBehaviour
     public float maxHeightDifference;
 
     public GameObject trapPlatform1;
-    public GameObject trapPlatform2;
+    public GameObject trapPlatform2; 
+    public GameObject spikePlatform; 
     private float trapRange;
     // Start is called before the first frame update
     void Start()
@@ -64,13 +65,27 @@ public class SpawnPlatforms : MonoBehaviour
                 bool leftTrap = (Random.value > 0.5f);
                 if (leftTrap)
                 {
-                    //spawn in trap platform 1
-                    Instantiate(trapPlatform1, transform.position, transform.rotation);
+                    bool spikeTrap = (Random.value > 0.5f);
+                    if (spikeTrap)
+                    {
+                        Instantiate(spikePlatform, transform.position, transform.rotation);
+                    }
+                    else
+                    {
+                        //spawn in trap platform 1
+                        Instantiate(trapPlatform1, transform.position, transform.rotation);
+                    }
                 }
                 else
                 {
-                    //spawn in trap platform 2
-                    Instantiate(trapPlatform2, transform.position, transform.rotation);
+                    bool spikeTrap = (Random.value > 0.5f);
+                    if (spikeTrap) {
+                        Instantiate(spikePlatform, transform.position, transform.rotation);
+                    }
+                    else{
+                        //spawn in trap platform 2
+                        Instantiate(trapPlatform2, transform.position, transform.rotation);
+                    }
                 }
             }
             else 
