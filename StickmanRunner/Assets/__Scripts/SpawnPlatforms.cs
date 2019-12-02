@@ -58,6 +58,8 @@ public class SpawnPlatforms : MonoBehaviour
 
             //set trapRange to a random value between 1 and 10
             trapRange = Random.Range(0, 10);
+            //Variavble used to determine chance of spike trap spawn
+            int spikeTrap;
 
             if (trapRange > 5)
             {
@@ -65,9 +67,8 @@ public class SpawnPlatforms : MonoBehaviour
                 bool leftTrap = (Random.value > 0.5f);
                 if (leftTrap)
                 {
-                    bool spikeTrap = (Random.value > 0.5f);
-                    if (spikeTrap)
-                    {
+                    spikeTrap = Random.Range(0, 10);
+                    if (spikeTrap >= 9) { 
                         Instantiate(spikePlatform, transform.position, transform.rotation);
                     }
                     else
@@ -78,8 +79,8 @@ public class SpawnPlatforms : MonoBehaviour
                 }
                 else
                 {
-                    bool spikeTrap = (Random.value > 0.5f);
-                    if (spikeTrap) {
+                    spikeTrap = Random.Range(0, 10);
+                    if (spikeTrap >= 9) {
                         Instantiate(spikePlatform, transform.position, transform.rotation);
                     }
                     else{
