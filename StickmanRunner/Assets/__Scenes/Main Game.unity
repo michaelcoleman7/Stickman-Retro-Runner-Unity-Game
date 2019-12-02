@@ -788,7 +788,7 @@ PrefabInstance:
     - target: {fileID: 4868946163407687331, guid: 66f413bf1b7405d44b3c457bdca9597b,
         type: 3}
       propertyPath: maxHeightDifference
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4868946163407687331, guid: 66f413bf1b7405d44b3c457bdca9597b,
         type: 3}
@@ -944,12 +944,12 @@ PrefabInstance:
     - target: {fileID: 6141779522407686793, guid: 8b429841998f8c94cae1bfb0bd761610,
         type: 3}
       propertyPath: jumpForce
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6141779522407686793, guid: 8b429841998f8c94cae1bfb0bd761610,
         type: 3}
       propertyPath: moveSpeed
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6141779522407686793, guid: 8b429841998f8c94cae1bfb0bd761610,
         type: 3}
