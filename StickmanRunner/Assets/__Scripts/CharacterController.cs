@@ -29,13 +29,10 @@ public class CharacterController : MonoBehaviour
 
     public GameController gameController;
 
-    Animator anim;
-
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
 
         //set the Jump period timer to the jump period specified
         jumpPeriodTimer = jumpPeriod;
@@ -101,16 +98,9 @@ public class CharacterController : MonoBehaviour
         //if user hit ground, reset jump period timer
         if (onGround) 
         {
-            anim.SetTrigger("Ground");
             jumpPeriodTimer = jumpPeriod;
             doubleJump = true;
         }
-
-        if (!onGround)
-        {
-            //anim.SetTrigger("Jump");
-        }
-
     }
 
     void FixedUpdate()
