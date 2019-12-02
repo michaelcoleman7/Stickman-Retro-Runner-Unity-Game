@@ -956,6 +956,16 @@ PrefabInstance:
       propertyPath: jumpPeriod
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 6141779522407686793, guid: 8b429841998f8c94cae1bfb0bd761610,
+        type: 3}
+      propertyPath: speedMultiplyer
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141779522407686793, guid: 8b429841998f8c94cae1bfb0bd761610,
+        type: 3}
+      propertyPath: scoreSpeedIncrease
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 6141779522407686788, guid: 8b429841998f8c94cae1bfb0bd761610,
         type: 3}
       propertyPath: m_LocalPosition.x
