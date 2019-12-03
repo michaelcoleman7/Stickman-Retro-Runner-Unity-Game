@@ -13,10 +13,12 @@ public class MainMenuController : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("MutedSFX"))
         {
+            //If key already exists in player prefernces, then load it in as the muted value
             PlayerPrefs.SetString("MutedSFX", PlayerPrefs.GetString("MutedSFX"));
         }
         else 
         { 
+            //Set muted sound effects to false if the key doesnt exist
             PlayerPrefs.SetString("MutedSFX", "false");
         }
         
@@ -29,19 +31,24 @@ public class MainMenuController : MonoBehaviour
 
     public void OptionsMenu()
     {
+        // Load options menu scene
         SceneManager.LoadScene("Options Menu");
     }
 
     public void HelpMenu()
     {
+        //If UI is already enabled when user presses help button
         if (helpInfo.enabled)
         {
+            //disable all UI info for help/controls information
             helpInfo.enabled = false;
             helpText.enabled = false;
             helpText2.enabled = false;
         }
+        //if UI is disabled when user presses help button
         else 
         {
+            //enable all UI info for help/controls information
             helpInfo.enabled = true;
             helpText.enabled = true;
             helpText2.enabled = true;
