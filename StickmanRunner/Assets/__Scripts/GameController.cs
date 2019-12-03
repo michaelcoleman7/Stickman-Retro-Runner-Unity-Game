@@ -23,10 +23,14 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //save start position for starting platform for game reset
         platformStartPosition = platformGenerator.position;
+        //save death platform start position for reset
         deathPlatformStartPosition = deathPlatformGenerator.position;
+        // save the players start position for a restart
         playerStartPosition = player.transform.position;
 
+        //find the score manager object by type - adpated from: https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html
         scoreManager = FindObjectOfType<ScoreManager>();
     }
 
@@ -39,7 +43,7 @@ public class GameController : MonoBehaviour
             pauseMenuController.PauseGame();
         }
     }
-        public void RestartGame() 
+    public void RestartGame() 
     {
         // Stop score increasing after death
         scoreManager.increaseScore = false;
@@ -59,6 +63,7 @@ public class GameController : MonoBehaviour
         platformList = FindObjectsOfType<PlatformDestoyer>();
         for (int i = 0; i < platformList.Length; i++)
         {
+            //set all objects to false which are supposed to be destroyed
             platformList[i].gameObject.SetActive(false);
         }
 
