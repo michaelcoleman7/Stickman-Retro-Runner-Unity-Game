@@ -14,6 +14,7 @@ public class PauseMenuController : MonoBehaviour
         //set pause menu to be inactive
         pausemenu.SetActive(false);
     }
+
     //Pause Game
     public void PauseGame()
     {
@@ -22,6 +23,7 @@ public class PauseMenuController : MonoBehaviour
         //set pause menu to be active
         pausemenu.SetActive(true);
     }
+
     //Restart Game
     public void RestartGame()
     {
