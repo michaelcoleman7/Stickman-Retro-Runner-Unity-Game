@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreenManager : MonoBehaviour
 {
-    
+    //restart game
     public void RestartGame()
     {
         FindObjectOfType<GameController>().ResetGame();
