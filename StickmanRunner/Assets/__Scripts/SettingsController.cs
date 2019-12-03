@@ -11,6 +11,7 @@ public class SettingsController : MonoBehaviour
 
     void Start()
     {
+        //check for music and sound prefernces upon startup
         CheckMusic();
         CheckSFX();
     }
@@ -79,6 +80,7 @@ public class SettingsController : MonoBehaviour
 
     public void MainMenu()
     {
+        //load main menu scene
         SceneManager.LoadScene("Main Menu");
     }
 }
