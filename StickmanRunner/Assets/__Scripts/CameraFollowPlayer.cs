@@ -9,7 +9,7 @@ public class CameraFollowPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //change the camera size to allow fitting of the screen
+        //change the camera size to allow fitting of the screen - adapted from https://docs.unity3d.com/ScriptReference/Camera.html and https://docs.unity3d.com/ScriptReference/Screen.html
         GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height / 2) / cameraDistance);
     }
 
