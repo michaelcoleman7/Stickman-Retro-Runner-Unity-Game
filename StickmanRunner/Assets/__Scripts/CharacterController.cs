@@ -37,9 +37,11 @@ public class CharacterController : MonoBehaviour
         //set the Jump period timer to the jump period specified
         jumpPeriodTimer = jumpPeriod;
 
+        // save values for resetting the game
         moveSpeedStartValue = moveSpeed;
         scoreSpeedIncreaseCountStartValue = scoreSpeedIncreaseCount;
         scoreSpeedIncreaseStartValue = scoreSpeedIncrease;
+        //initialize the player jumping as false for double jump
         jumping = false;
     }
 
@@ -48,6 +50,7 @@ public class CharacterController : MonoBehaviour
         //Jump when space pressed or mouse clicked user should jump
         if (Input.GetKeyDown(KeyCode.Space) && onGround || Input.GetMouseButtonDown((0)))
         {
+            //if player is on the ground
             if (onGround)
             {
                 //jump player by the jump force specified
@@ -56,19 +59,25 @@ public class CharacterController : MonoBehaviour
                 // player has initiated a jump
                 jumping = true;
             }
-
+            //if in the air and double jump is true
             if (!onGround && doubleJump) 
             {
+                //jump the player
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                //set the timer to the jump period
                 jumpPeriodTimer = jumpPeriod;
+
                 // player has initiated a jump
                 jumping = true;
+
+                //set double jump to false
                 doubleJump = false;
             }
         }
-
+        //Jump when space pressed or mouse clicked user should jump and the player is already jumping
         if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton((0))) && jumping)
         {
+            //if jump timer is > 0
             if (jumpPeriodTimer > 0)
             {
                 //jump player by the jump force specified
@@ -92,13 +101,17 @@ public class CharacterController : MonoBehaviour
             //set timer to 0
             jumpPeriodTimer = 0;
 
+            //set jumping to false
             jumping = false;
         }
 
-        //if user hit ground, reset jump period timer
+        //if user hit ground, reset jump abilities
         if (onGround) 
         {
+            //set timer to the jump period
             jumpPeriodTimer = jumpPeriod;
+
+            //set doublejump ability to true
             doubleJump = true;
         }
     }
@@ -112,11 +125,11 @@ public class CharacterController : MonoBehaviour
         {
             scoreSpeedIncreaseCount = scoreSpeedIncrease;
 
-            //increase the distance the incraese occurs at as the player will be moving faster
-            scoreSpeedIncrease = scoreSpeedIncrease * speedMultiplyer;
+            //increase the distance the increase occurs at as the player will be moving faster
+            scoreSpeedIncrease *= speedMultiplyer;
 
             //increase move speed by the multiplyer
-            moveSpeed = moveSpeed * speedMultiplyer;
+            moveSpeed *= speedMultiplyer;
 
         }
 
@@ -132,18 +145,23 @@ public class CharacterController : MonoBehaviour
     }
 
 
-    //Adopted from https://gamedev.stackexchange.com/questions/82119/simple-collision-detection-in-unity-2d
+    //When user collides with a object tagged with deatharea- Adopted from https://gamedev.stackexchange.com/questions/82119/simple-collision-detection-in-unity-2d
     void OnCollisionEnter2D(Collision2D c)
     {
         if (c.gameObject.tag == "DeathArea") 
         {
+            //call restart game function
             gameController.RestartGame();
+            //reset movement speed
             moveSpeed = moveSpeedStartValue;
+            //reset score increase count
             scoreSpeedIncreaseCount = scoreSpeedIncreaseCountStartValue;
+            //reset score increase
             scoreSpeedIncrease = scoreSpeedIncreaseStartValue;
+            //if sound effects are on, then play the death sound
             if (PlayerPrefs.GetString("MutedSFX") == "false")
             {
-                //Play Jump sound clip
+                //Play Jump sound clip - adapted from https://docs.unity3d.com/ScriptReference/AudioSource.Play.html
                 deathSound.Play();
             }
         }
