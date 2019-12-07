@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pausemenu;
+    public GameObject deathmenu;
+    private bool deathMenuwasActive=false;
+
     //Resume Game
     public void ResumeGame()
     {
@@ -13,6 +16,10 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1f;
         //set pause menu to be inactive
         pausemenu.SetActive(false);
+        if (deathMenuwasActive) {
+            deathmenu.SetActive(true);
+            deathMenuwasActive = false;
+        }
     }
 
     //Pause Game
@@ -22,6 +29,14 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 0f;
         //set pause menu to be active
         pausemenu.SetActive(true);
+
+        //if player has died, death menu will be active - adapted from https://docs.unity3d.com/ScriptReference/GameObject-activeSelf.html
+        if (deathmenu.activeSelf) {
+            //turn off death menu
+            deathmenu.SetActive(false);
+            //set deathmenuwas active to true, used to restore death menu for user - prevents user being left with no menu before a reset upon death
+            deathMenuwasActive = true;
+        }
     }
 
     //Restart Game
@@ -29,8 +44,11 @@ public class PauseMenuController : MonoBehaviour
     {
         // Set timescale to 1, resuming all movement
         Time.timeScale = 1f;
-        /// Set pause menu to be active
+        // Set pause menu to be active
         pausemenu.SetActive(false);
+        //Set deathmenuwasactive to false, to ensure user cant restart while variable is set active
+        // will result in deathmenu displaying if not resetting value
+        deathMenuwasActive = false;
         //Find game controller (as there is only one in game) and call reset game function
         FindObjectOfType<GameController>().ResetGame();
     }
