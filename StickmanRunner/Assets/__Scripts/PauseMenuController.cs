@@ -16,8 +16,11 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1f;
         //set pause menu to be inactive
         pausemenu.SetActive(false);
+        //if death menu was active
         if (deathMenuwasActive) {
+            //then reset it to active upon unpausing
             deathmenu.SetActive(true);
+            //reset deathmenuwasactive value
             deathMenuwasActive = false;
         }
     }
