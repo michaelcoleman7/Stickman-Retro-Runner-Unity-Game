@@ -5,6 +5,7 @@
 ## Important Usage Notes:
 - <b>Aspect Ratio:</b> should be set to <b>18:9</b> for the best experience on both PC and Android - This needs to be set manually on your unity version.
 - Coded in Unity version <b>2019.2.6f1</b> 
+- Player Setting Should force the game to be played Horizontally in android. This is done by navigateing to File -> Build Settings -> Player Settings -> Resolution and Presentation, then selecting <b>Landcape left</b> under the Default Orienation variable.
 
 ## How to use:
 - <b>PC:</b>
